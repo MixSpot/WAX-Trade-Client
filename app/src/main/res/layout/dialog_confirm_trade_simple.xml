@@ -15,6 +15,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:hint="@string/fa_code"
+        style="@style/Widget.Design.TextInputLayout"
         app:counterEnabled="true"
         app:counterMaxLength="6"
         app:hintAnimationEnabled="true"

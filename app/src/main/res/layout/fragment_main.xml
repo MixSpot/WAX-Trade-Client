@@ -128,7 +128,6 @@
                         android:layout_height="24dp"
                         android:visibility="invisible"
                         app:layout_constraintBottom_toBottomOf="@+id/sendCounter"
-                        app:layout_constraintEnd_toEndOf="@+id/sendCounter"
                         app:layout_constraintStart_toStartOf="@+id/sendCounter"
                         app:layout_constraintTop_toTopOf="@+id/sendCounter" />
 
@@ -162,7 +161,6 @@
                         android:layout_height="24dp"
                         android:visibility="invisible"
                         app:layout_constraintBottom_toBottomOf="@+id/receivedCount"
-                        app:layout_constraintEnd_toEndOf="@+id/receivedCount"
                         app:layout_constraintStart_toStartOf="@+id/receivedCount"
                         app:layout_constraintTop_toTopOf="@+id/receivedCount" />
 
