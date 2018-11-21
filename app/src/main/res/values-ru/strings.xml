@@ -85,7 +85,7 @@
     <string name="waiting">Ожидание</string>
     <string name="filter_new">Новые</string>
     <string name="pending">В ожидании</string>
-    <string name="accepted">Прнятые</string>
+    <string name="accepted">Принятые</string>
     <string name="filter_expired">Истекшие</string>
     <string name="declined">Отклоненные</string>
     <string name="canceled">Отмененые</string>
