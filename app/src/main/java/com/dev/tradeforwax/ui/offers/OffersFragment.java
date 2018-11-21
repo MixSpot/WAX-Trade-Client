@@ -29,11 +29,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import static com.dev.tradeforwax.ui.offer.OfferFragment.ARG_OFFER_ID;
 
 
-public class OffersFragment extends Fragment implements OffersAdapter.Callback {
+public class OffersFragment extends Fragment
+        implements SwipeRefreshLayout.OnRefreshListener, OffersAdapter.Callback {
 
     private String mType = "received";
     private String mSort = "modified";
@@ -41,9 +43,10 @@ public class OffersFragment extends Fragment implements OffersAdapter.Callback {
 
     private RecyclerView mRecyclerView;
     private OffersAdapter mAdapter;
-    private View mProgressBar;
     private View mEmptyState;
     private View mClearFilterView;
+
+    private SwipeRefreshLayout mSwipeRefreshLayout;
 
     private PopupMenu mSortMenu = null;
     private PopupMenu mFilterMenu = null;
@@ -66,7 +69,9 @@ public class OffersFragment extends Fragment implements OffersAdapter.Callback {
         mAdapter = new OffersAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
 
-        mProgressBar = view.findViewById(R.id.progressBar);
+        mSwipeRefreshLayout = view.findViewById(R.id.swipeView);
+        mSwipeRefreshLayout.setOnRefreshListener(this);
+
         mEmptyState = view.findViewById(R.id.emptyState);
         mClearFilterView = view.findViewById(R.id.clearFilterButton);
         mClearFilterView.setOnClickListener(new View.OnClickListener() {
@@ -113,14 +118,14 @@ public class OffersFragment extends Fragment implements OffersAdapter.Callback {
     {
         final OffersViewModel viewModel = ViewModelProviders.of(OffersFragment.this).get(OffersViewModel.class);
 
-        mProgressBar.setVisibility(View.VISIBLE);
+        mSwipeRefreshLayout.setRefreshing(true);
         mEmptyState.setVisibility(View.GONE);
         mClearFilterView.setVisibility(View.GONE);
         mAdapter.clearData();
         viewModel.getOffers(mSort, mType, mFilter, isRefresh).observe(this, new Observer<ResponseOffers>() {
             @Override
             public void onChanged(@Nullable ResponseOffers responseOffers) {
-                mProgressBar.setVisibility(View.GONE);
+                mSwipeRefreshLayout.setRefreshing(false);
                 if(responseOffers == null){
                     Snackbar.make(mRecyclerView, R.string.opskins_not_responding, Snackbar.LENGTH_INDEFINITE)
                             .setAction(R.string.retry, new View.OnClickListener() {
@@ -147,6 +152,9 @@ public class OffersFragment extends Fragment implements OffersAdapter.Callback {
 
     @Override
     public void onOfferClick(int offerId){
+        mFilterMenu = null;
+        mSortMenu = null;
+
         final Bundle bundle = new Bundle();
         bundle.putInt(ARG_OFFER_ID, offerId);
         NavHostFragment.findNavController(OffersFragment.this).navigate(R.id.offerFragment, bundle);
@@ -200,6 +208,29 @@ public class OffersFragment extends Fragment implements OffersAdapter.Callback {
                         mFilterMenu.getMenu().findItem(R.id.filter_pending).setVisible(false);
                     }
 
+                    for (int i = 0; i < mFilter.size(); i++)
+                        switch (mFilter.get(i)){
+                            case Trade.STATE_ACTIVE:
+                                mFilterMenu.getMenu().findItem(R.id.filter_waiting).setChecked(true);
+                                mFilterMenu.getMenu().findItem(R.id.filter_new).setChecked(true);
+                                break;
+                            case Trade.STATE_PENDING_CASE_OPEN:
+                                mFilterMenu.getMenu().findItem(R.id.filter_pending).setChecked(true);
+                                break;
+                            case Trade.STATE_ACCEPTED:
+                                mFilterMenu.getMenu().findItem(R.id.filter_accepted).setChecked(true);
+                                break;
+                            case Trade.STATE_EXPIRED:
+                                mFilterMenu.getMenu().findItem(R.id.filter_expired).setChecked(true);
+                                break;
+                            case Trade.STATE_DECLINED:
+                                mFilterMenu.getMenu().findItem(R.id.filter_declined).setChecked(true);
+                                break;
+                            case Trade.STATE_CANCELED:
+                                mFilterMenu.getMenu().findItem(R.id.filter_canceled).setChecked(true);
+                                break;
+                        }
+
                     mFilterMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                         @Override
                         public boolean onMenuItemClick(MenuItem menuItem) {
@@ -248,5 +279,10 @@ public class OffersFragment extends Fragment implements OffersAdapter.Callback {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onRefresh() {
+        refreshOffers(true);
     }
 }

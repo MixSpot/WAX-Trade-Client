@@ -43,21 +43,21 @@
         </com.google.android.material.tabs.TabLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:spanCount="1"
-        tools:listitem="@layout/view_offer" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:spanCount="1"
+            tools:listitem="@layout/view_offer" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <TextView
         android:id="@+id/emptyState"
@@ -67,7 +67,8 @@
         android:gravity="center"
         android:text="@string/no_offers_found"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible" />
+        android:visibility="gone"
+        tools:visibility="visible" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/clearFilterButton"
