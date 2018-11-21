@@ -73,7 +73,6 @@ public class InventoryFragment extends Fragment
     private final SparseArray<App> mApps = new SparseArray<>();
     private Target mTarget;
     private MenuBuilder mAppsMenu;
-    private MenuPopupHelper mAppsHelper = null;
     private MenuItem mGameMenuItem;
 
     private Drawable defaultApp;
@@ -372,11 +371,9 @@ public class InventoryFragment extends Fragment
                 mSortMenu.show();
                 return true;
             case R.id.action_game:
-                if(mAppsHelper == null){
-                    mAppsHelper = new MenuPopupHelper(getContext(), mAppsMenu, getActivity().findViewById(R.id.action_game));
-                    mAppsHelper.setForceShowIcon(true);
-                }
-                mAppsHelper.show();
+                final MenuPopupHelper appsPopup = new MenuPopupHelper(getContext(), mAppsMenu, getActivity().findViewById(R.id.action_game));
+                appsPopup.setForceShowIcon(true);
+                appsPopup.show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
