@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/filter_waiting"
+            android:title="@string/waiting" />
+        <item
+            android:id="@+id/filter_new"
+            android:title="@string/filter_new" />
+
+        <item
+            android:id="@+id/filter_pending"
+            android:title="@string/pending" />
+        <item
+            android:id="@+id/filter_accepted"
+            android:title="@string/accepted" />
+        <item
+            android:id="@+id/filter_expired"
+            android:title="@string/filter_expired" />
+        <item
+            android:id="@+id/filter_declined"
+            android:title="@string/declined" />
+        <item
+            android:id="@+id/filter_canceled"
+            android:title="@string/canceled" />
+    </group>
+</menu>

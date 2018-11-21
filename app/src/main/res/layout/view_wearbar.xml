@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/wearBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/fn"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+
+        android:background="@color/wearFN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".06999999999999" />
+
+    <View
+        android:id="@+id/mw"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@color/wearMW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fn"
+        app:layout_constraintTop_toTopOf="@+id/fn"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".07999999999999" />
+
+    <View
+        android:id="@+id/ft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@color/wearFT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mw"
+        app:layout_constraintTop_toTopOf="@+id/mw"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".22999999999999" />
+
+    <View
+        android:id="@+id/ww"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@color/wearWW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ft"
+        app:layout_constraintTop_toTopOf="@+id/ft"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.06999999999999" />
+
+    <View
+        android:id="@+id/bs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@color/wearBS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ww"
+        app:layout_constraintTop_toTopOf="@+id/ww" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/wearPointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <ImageView
+        android:id="@+id/wearPointerImage"
+        android:layout_width="24dp"
+        android:layout_height="16dp"
+        android:scaleType="center"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/wearPointer"
+        app:layout_constraintStart_toStartOf="@+id/wearPointer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

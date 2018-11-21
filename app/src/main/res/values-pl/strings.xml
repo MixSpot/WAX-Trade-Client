@@ -1,0 +1,26 @@
+<resources>
+    <string name="search">Szukaj</string>
+    <string name="trade">Wymiana</string>
+
+    <string name="logout">Wyloguj</string>
+
+    <string name="sort">Sortuj</string>
+
+    <string name="offer_message">Wiadomość oferty</string>
+
+    <string name="fa_code">Wprowadź Kod Dwuczynnego Uwierzytelnienia</string>
+    <string name="confirm_trade">Stwórz oferte</string>
+
+    <string name="inventory">Ekwipunek</string>
+
+    <string name="waiting">Czekanie</string>
+    <string name="filter_new">Nowy</string>
+    <string name="pending">W oczekiwaniu</string>
+    <string name="accepted">Przyjęty</string>
+    <string name="filter_expired">Przedawniony</string>
+    <string name="declined">Odrzucono</string>
+    <string name="canceled">Anulowany</string>
+
+    <string name="offers">Oferty</string>
+
+</resources>

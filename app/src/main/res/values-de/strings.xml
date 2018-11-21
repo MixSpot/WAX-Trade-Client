@@ -1,0 +1,26 @@
+<resources>
+    <string name="search">Suchen</string>
+    <string name="trade">Handel</string>
+
+    <string name="logout">Ausloggen</string>
+
+    <string name="sort">Sortieren</string>
+
+    <string name="offer_message">Nachricht</string>
+
+    <string name="fa_code">Füge deinen Zwei-Faktor-Code hinzu</string>
+    <string name="confirm_trade">Angebot erstellen</string>
+
+    <string name="inventory">Inventar</string>
+
+    <string name="waiting">Warten</string>
+    <string name="filter_new">Neu</string>
+    <string name="pending">Unterwegs</string>
+    <string name="accepted">Angenommen</string>
+    <string name="filter_expired">Abgelaufen</string>
+    <string name="declined">Abgebrochen</string>
+    <string name="canceled">Abgebrochen</string>
+
+    <string name="offers">Handelsangebote</string>
+
+</resources>

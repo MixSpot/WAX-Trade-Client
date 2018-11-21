@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">WAX Trade Client</string>
+
+    <string name="partner_trade_url_or_steam_id">Трейд ссылка партнера или Steam ID</string>
+
+    <string name="your_trade_url">Ваша трейд ссылка</string>
+    <string name="search">Поиск</string>
+    <string name="trade">Обмен</string>
+    <string name="create_trade">Создать обмен</string>
+    <string name="logout">Выйти</string>
+    <string name="your_trade_url_copied">Ваша трейд ссылка скопирована</string>
+    <string name="your_trade_url_is_loading">Ваша трейд ссылка загружается</string>
+    <string name="message">Сообщение</string>
+    <string name="sort">Сортировка</string>
+
+    <string name="name_asc">По алфавиту А-Я</string>
+    <string name="name_desc">По алфавиту Я-А</string>
+    <string name="last_update_asc">Сначала старые</string>
+    <string name="last_update_desc">Сначала новые</string>
+    <string name="suggested_price_asc">Цена от низкой к высокой</string>
+    <string name="suggested_price_desc">Цена с высокой до низкой</string>
+
+    <string name="partner">Партнер</string>
+    <string name="incorrect_trade_url">Неверный ссылка для обмена</string>
+    <string name="you_cant_trade_with_yourself">Нельзя обмениваться с самим собой</string>
+    <string name="offer_message">Прикрепить сообщение</string>
+    <string name="your_partner">Ваш партнер</string>
+
+    <string name="inventory_is_empty">Инвентарь пустой</string>
+    <string name="empty_trade">Нельзя создать пустой обмен</string>
+
+    <string name="fa_code">Двухфакторный код аутентификации</string>
+    <string name="confirm_trade">Подтвердить обмен</string>
+
+    <string name="trade_offers">Торговые предложения</string>
+
+    <string name="enable">Включить</string>
+    <string name="you_must_enable_two_factor_authentication_to_create_trade_offers">Для создания торговых предложений необходимо включить двухфакторную аутентификацию</string>
+
+    <string name="new_received">Полученные</string>
+    <string name="waiting_sent">Отправленные</string>
+
+    <string name="send">Отправить</string>
+    <string name="opskins_not_responding">OPSkins не отвечает</string>
+    <string name="retry">Повторить</string>
+
+    <string name="offer">Предложение</string>
+    <string name="trade_offer">Торговое предложение</string>
+    <string name="refresh">Обновить</string>
+    <string name="no_offers_found">Предложения не найдены</string>
+    <string name="send_0_and_recive_0">Отправил %1$d и получил %2$d предметов</string>
+
+    <string name="status">Статус</string>
+    <string name="created">Создан</string>
+    <string name="expires">Истекает</string>
+    <string name="modified">Модифицированный</string>
+
+    <string name="decline">Отклонить</string>
+    <string name="cancel">Отменить</string>
+    <string name="accept">Принять</string>
+
+    <string name="their_items">Их предметы</string>
+    <string name="your_items">Ваши предметы</string>
+
+    <string name="gift">Подарок</string>
+
+    <string name="sent">Отправленые</string>
+    <string name="received">Полученые</string>
+
+
+    <string name="sign_in_with">Войти через</string>
+    <string name="report">Сообщить</string>
+    <string name="spam">Спам</string>
+    <string name="phishing">Фишинг</string>
+    <string name="error">Ошибка</string>
+    <string name="select_a_report_type">Выберите тип</string>
+    <string name="add_a_message_optional">Добавить сообщение (необязательно)</string>
+    <string name="submit">Отправить</string>
+    <string name="game">Игра</string>
+    <string name="inventory">Инвентарь</string>
+    <string name="trade_url_is_incorrect">Неправильная трейд ссылка</string>
+    <string name="warning">Предупреждение</string>
+
+
+    <string name="waiting">Ожидание</string>
+    <string name="filter_new">Новые</string>
+    <string name="pending">В ожидании</string>
+    <string name="accepted">Прнятые</string>
+    <string name="filter_expired">Истекшие</string>
+    <string name="declined">Отклоненные</string>
+    <string name="canceled">Отмененые</string>
+
+    <string name="clear_filter">Очистить фильтр</string>
+
+
+    <string name="recent_partners">Недавние партнеры</string>
+    <string name="you_have_not_traded_with_anyone_yet">Вы еще ни с кем не торговали</string>
+
+    <string name="your">Ваши</string>
+    <string name="their">Их</string>
+    <string name="offers">Предложения</string>
+
+    <string name="withdraw_to_opskins">Вывести на OPSkins</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="import_from_opskins">Импортировать из OPSkins</string>
+    <string name="you_must_select_items">Вы должны выбрать предметы</string>
+
+    <string name="suggested_price">Предпологаемая цена</string>
+    <string name="category">Категория</string>
+    <string name="front">Спереди</string>
+    <string name="back">Сзади</string>
+    <string name="video">Видео</string>
+    <string name="wear">Потертость: %1$s%%</string>
+
+    <string name="maximum_is_100_items">Максимум 100 предметов</string>
+
+</resources>

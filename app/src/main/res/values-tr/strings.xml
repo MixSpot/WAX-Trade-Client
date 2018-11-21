@@ -1,0 +1,26 @@
+<resources>
+    <string name="search">Arama</string>
+    <string name="trade">Takas</string>
+
+    <string name="logout">Çıkış yap</string>
+
+    <string name="sort">Sırala</string>
+
+    <string name="offer_message">Teklif Mesajı</string>
+
+    <string name="fa_code">2 Aşamalı Kimlik Doğrulama Kodunu gir</string>
+    <string name="confirm_trade">Teklif yap</string>
+
+    <string name="inventory">Envanter</string>
+
+    <string name="waiting">Bekleyen</string>
+    <string name="filter_new">Yeni</string>
+    <string name="pending">Beklemede</string>
+    <string name="accepted">Kabul edilen</string>
+    <string name="filter_expired">Süresi dolan</string>
+    <string name="declined">Reddedilen</string>
+    <string name="canceled">İptal edilen</string>
+
+    <string name="offers">Teklifler</string>
+
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#22353c</color>
+    <color name="primaryLightColor">#484848</color>
+    <color name="primaryDarkColor">#1f2c32</color>
+    <color name="primaryTextColor">#ffffff</color>
+
+    <color name="accentColor">#4caf50</color>
+
+    <color name="bgStart">#23343b</color>
+    <color name="bgEnd">#22333b</color>
+    <color name="cardStart">#314f59</color>
+    <color name="cardEnd">#2a3d44</color>
+    <color name="warningStart">#f9a825</color>
+    <color name="warningEnd">#f57f17</color>
+
+
+    <color name="wearFN">#008000</color>
+    <color name="wearMW">#5cb85c</color>
+    <color name="wearFT">#f0ad4e</color>
+    <color name="wearWW">#d9534f</color>
+    <color name="wearBS">#993a38</color>
+
+
+    <color name="selected">#55000000</color>
+    <color name="divider">#1FFFFFFF</color>
+</resources>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="search">Pesquisar</string>
+    <string name="trade">Trocar</string>
+
+    <string name="logout">Sair</string>
+
+    <string name="sort">Ordenar</string>
+
+    <string name="offer_message">Mensagem da Proposta</string>
+
+    <string name="fa_code">Introduza o código de Autenticação em Duas Vias (2FA)</string>
+    <string name="confirm_trade">Fazer Proposta</string>
+
+    <string name="inventory">Inventário</string>
+
+    <string name="waiting">Aguardando</string>
+    <string name="filter_new">Novo</string>
+    <string name="pending">Pendente</string>
+    <string name="accepted">Aceite</string>
+    <string name="filter_expired">Expirado</string>
+    <string name="declined">Recusado</string>
+    <string name="canceled">Cancelado</string>
+
+    <string name="offers">Propostas</string>
+
+</resources>

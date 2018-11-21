@@ -1,0 +1,47 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+
+        <item name="colorAccent">@color/accentColor</item>
+
+        <item name="colorSecondary">@color/accentColor</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+
+        <item name="android:windowBackground">@drawable/gradient_window</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Selection in inventory page above Toolbar -->
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="android:textColorSecondary">@color/accentColor</item>
+        <item name="colorControlNormal">@color/accentColor</item>
+
+        <item name="materialButtonStyle">@style/AppTheme.Button</item>
+        <item name="alertDialogTheme">@style/AppTheme.Dialog</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">?attr/colorAccent</item>
+    </style>
+    <style name="AppTheme.Dialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:windowBackground">@color/primaryDarkColor</item>
+    </style>
+    <style name="AppTheme.Dialog.Fullscreen" parent="AlertDialog.MaterialComponents">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorAccent">@color/accentColor</item>
+
+        <item name="android:windowSoftInputMode">adjustResize|stateHidden</item>
+
+        <item name="android:windowBackground">@color/primaryColor</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+</resources>

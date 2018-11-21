@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/apiKeyFragment"
+        android:name="com.dev.tradeforwax.ui.apikey.ApiKeyFragment"
+        android:label="apikey_fragment"
+        tools:layout="@layout/fragment_apikey" >
+        <action
+            android:id="@+id/action_apiKeyFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <deepLink
+            app:uri="waxtradeclient://auth" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.dev.tradeforwax.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_tradeFragment"
+            app:destination="@id/tradeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_apiKeyFragment"
+            app:destination="@id/apiKeyFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_offersFragment"
+            app:destination="@id/offersFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_inventoryFragment"
+            app:destination="@id/inventoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tradeFragment"
+        android:name="com.dev.tradeforwax.ui.trade.TradeFragment"
+        android:label="trade_fragment"
+        tools:layout="@layout/fragment_trade" >
+        <action
+            android:id="@+id/action_tradeFragment_to_offerFragment"
+            app:destination="@id/offerFragment" />
+        <argument
+            android:name="uid"
+            app:argType="integer" />
+        <argument
+            android:name="token"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/offerFragment"
+        android:name="com.dev.tradeforwax.ui.offer.OfferFragment"
+        android:label="offer_fragment"
+        tools:layout="@layout/fragment_offer" >
+        <argument
+            android:name="offer_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/offersFragment"
+        android:name="com.dev.tradeforwax.ui.offers.OffersFragment"
+        android:label="offers_fragment"
+        tools:layout="@layout/fragment_offers">
+        <action
+            android:id="@+id/action_offersFragment_to_offerFragment"
+            app:destination="@id/offerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryFragment"
+        android:name="com.dev.tradeforwax.ui.inventory.InventoryFragment"
+        android:label="inventory_fragment"
+        tools:layout="@layout/fragment_inventory" >
+        <action
+            android:id="@+id/action_inventoryFragment_to_improtOpskinsFragment"
+            app:destination="@id/improtOpskinsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/improtOpskinsFragment"
+        android:name="com.dev.tradeforwax.ui.import_opskins.ImportOpskinsFragment"
+        android:label="improt_opskins_fragment"
+        tools:layout="@layout/fragment_import_opskins" />
+</navigation>

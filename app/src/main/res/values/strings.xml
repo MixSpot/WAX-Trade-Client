@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">WAX Trade Client</string>
+    <string name="opskins" translatable="false">OPSkins</string>
+    <string name="oauth_client_id" translatable="false">e12b21c0caab</string>
+
+    <string name="pattern_trade_url" translatable="false">https?://trade\\.opskins\\.com/t(?>rade/userid)?/(\\d+)/(?>token/)?([a-zA-Z0-9]+)</string>
+    <string name="pattern_steam_id" translatable="false">([0-9]{17})</string>
+
+    <string name="partner_trade_url_or_steam_id">Partner\'s trade URL or Steam ID</string>
+
+    <string name="your_trade_url">Your trade URL</string>
+    <string name="search">Search</string>
+    <string name="trade">Trade</string>
+    <string name="create_trade">Create trade</string>
+    <string name="logout">Logout</string>
+    <string name="your_trade_url_copied">Your trade URL copied</string>
+    <string name="your_trade_url_is_loading">Your trade URL is loading</string>
+    <string name="message">Message</string>
+    <string name="sort">Sort</string>
+
+    <string name="name_asc">Alphabetical A-Z</string>
+    <string name="name_desc">Alphabetical Z-A</string>
+    <string name="last_update_asc">Oldest first</string>
+    <string name="last_update_desc">Newest first</string>
+    <string name="suggested_price_asc">Price low to high</string>
+    <string name="suggested_price_desc">Price high to low</string>
+
+    <string name="partner">Partner</string>
+    <string name="incorrect_trade_url">Incorrect trade URL</string>
+    <string name="you_cant_trade_with_yourself">You can\'t trade with yourself</string>
+    <string name="offer_message">Offer message</string>
+    <string name="your_partner">Your partner</string>
+
+    <string name="inventory_is_empty">Inventory is empty</string>
+    <string name="empty_trade">Can\'t make empty trade</string>
+
+    <string name="fa_code">Two-Factor Authentication Code</string>
+    <string name="confirm_trade">Confirm trade</string>
+
+    <string name="trade_offers">Trade offers</string>
+
+    <string name="enable">Enable</string>
+    <string name="you_must_enable_two_factor_authentication_to_create_trade_offers">You must enable Two-Factor Authentication to create trade offers</string>
+
+    <string name="new_received">New received</string>
+    <string name="waiting_sent">Waiting sent</string>
+
+    <string name="send">Send</string>
+    <string name="opskins_not_responding">OPSkins is not responding</string>
+    <string name="retry">Retry</string>
+
+    <string name="offer">Offer</string>
+    <string name="trade_offer">Trade offer</string>
+    <string name="decline">Decline</string>
+    <string name="cancel">Cancel</string>
+    <string name="refresh">Refresh</string>
+    <string name="no_offers_found">No offers found</string>
+    <string name="send_0_and_recive_0">Sent %1$d item and received %2$d items</string>
+
+    <string name="status">Status</string>
+    <string name="created">Created</string>
+    <string name="expires">Expires</string>
+    <string name="modified">Modified</string>
+
+    <string name="accept">Accept</string>
+
+    <string name="their_items">Their items</string>
+    <string name="your_items">Your items</string>
+
+    <string name="gift">Gift</string>
+
+    <string name="sent">Sent</string>
+    <string name="received">Received</string>
+
+    <string name="sign_in_with">Sign in with</string>
+    <string name="report">Report</string>
+    <string name="spam">Spam</string>
+    <string name="phishing">Phishing</string>
+    <string name="error">Error</string>
+    <string name="select_a_report_type">Select a report type</string>
+    <string name="add_a_message_optional">Add a message (optional)</string>
+    <string name="submit">Submit</string>
+    <string name="game">Game</string>
+    <string name="inventory">Inventory</string>
+    <string name="trade_url_is_incorrect">Trade URL is incorrect</string>
+    <string name="warning">Warning</string>
+
+
+    <string name="waiting">Waiting</string>
+    <string name="filter_new">New</string>
+    <string name="pending">Pending</string>
+    <string name="accepted">Accepted</string>
+    <string name="filter_expired">Expired</string>
+    <string name="declined">Declined</string>
+    <string name="canceled">Canceled</string>
+
+    <string name="clear_filter">Clear filter</string>
+
+    <string name="recent_partners">Recent partners</string>
+    <string name="you_have_not_traded_with_anyone_yet">You haven\'t traded with anyone yet</string>
+    <string name="your">Your</string>
+    <string name="their">Their</string>
+    <string name="offers">Offers</string>
+
+    <string name="withdraw_to_opskins">Withdraw to OPSkins</string>
+    <string name="confirm">Confirm</string>
+    <string name="import_from_opskins">Import from OPSkins</string>
+
+    <string name="you_must_select_items">You must select items</string>
+    <string name="suggested_price">Suggested price</string>
+    <string name="category">Category</string>
+    <string name="front">Front</string>
+    <string name="back">Back</string>
+    <string name="video">Video</string>
+    <string name="wear">Wear: %1$s%%</string>
+
+    <string name="maximum_is_100_items">Maximum is 100 items</string>
+
+
+</resources>

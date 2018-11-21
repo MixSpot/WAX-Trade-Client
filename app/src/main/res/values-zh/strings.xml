@@ -1,0 +1,26 @@
+<resources>
+    <string name="search">搜索</string>
+    <string name="trade">交易</string>
+
+    <string name="logout">退出登录</string>
+
+    <string name="sort">排序</string>
+
+    <string name="offer_message">报价信息</string>
+
+    <string name="fa_code">请输入2FA验证码</string>
+    <string name="confirm_trade">发送报价</string>
+
+    <string name="inventory">库存</string>
+
+    <string name="waiting">等待中</string>
+    <string name="filter_new">最新</string>
+    <string name="pending">正在处理</string>
+    <string name="accepted">已接受</string>
+    <string name="filter_expired">已过期</string>
+    <string name="declined">已拒绝</string>
+    <string name="canceled">已取消</string>
+
+    <string name="offers">报价</string>
+
+</resources>
