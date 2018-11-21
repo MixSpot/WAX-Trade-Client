@@ -88,6 +88,8 @@ public class OffersAdapter extends RecyclerView.Adapter<OffersAdapter.ViewHolder
             holder.steam.setTag(partner.steam_id);
             holder.steam.setOnClickListener(new SteamOnClickListener());
         }
+        else
+            holder.steam.setVisibility(View.GONE);
 
         holder.vertified.setVisibility((partner.verified || offer.is_case_opening) ? View.VISIBLE : View.GONE);
         holder.gift.setVisibility(offer.is_gift ? View.VISIBLE : View.GONE);
