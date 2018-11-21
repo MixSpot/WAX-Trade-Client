@@ -54,7 +54,7 @@ public class OfferItemsAdapter extends RecyclerView.Adapter<OfferItemsAdapter.Vi
         holder.name.setSelected(true);
 
         final String url;
-        if(item.preview_urls != null && item.preview_urls.thumb_image != null)
+        if(item.preview_urls != null && item.preview_urls.thumb_image != null && !item.preview_urls.thumb_image.isEmpty())
             url = item.preview_urls.thumb_image;
         else
             url = item.image.px600;

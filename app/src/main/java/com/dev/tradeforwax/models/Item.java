@@ -77,9 +77,9 @@ public class Item {
         }
 
         final String url;
-        if(preview_urls != null && preview_urls.front_image != null)
+        if(preview_urls != null && preview_urls.front_image != null && !preview_urls.front_image.isEmpty())
             url = preview_urls.front_image;
-        else if(preview_urls != null && preview_urls.thumb_image != null)
+        else if(preview_urls != null && preview_urls.thumb_image != null && !preview_urls.thumb_image.isEmpty())
             url = preview_urls.thumb_image;
         else
             url = image.px600;
