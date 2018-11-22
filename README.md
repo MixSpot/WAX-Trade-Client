@@ -6,13 +6,13 @@ Developer Twitter: https://twitter.com/mix_spot
 
 ## Features
 
-- Authorization OPSkins OAuth
-- View your WAX ExpressTrade inventory
+- Authorization with OPSkins OAuth
+- View your WAX ExpressTrade inventory, with sorting and filtering
 - Withdraw and deposit items to OPSkins 
 - Create new trade offer by WAX Trade URL or Steam ID
 - Offers list, with sorting and filtering
 - Accept, cancel and report offers
-- Retry state for requests if OPSkins is not responding
+- Retry state for requests if API is not responding
 - Support Android from 4.0 (ICS) to the latest one (as Google says that is a 100% of Android devices)
 - Detailed information about item on long click
 - History of partners
