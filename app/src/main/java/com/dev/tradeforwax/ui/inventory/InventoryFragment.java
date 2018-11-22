@@ -68,8 +68,6 @@ public class InventoryFragment extends Fragment
     private InventoryAdapter mAdapter;
     private View mEmptyState;
 
-    private PopupMenu mSortMenu = null;
-
     private final SparseArray<App> mApps = new SparseArray<>();
     private Target mTarget;
     private MenuBuilder mAppsMenu;
@@ -332,43 +330,40 @@ public class InventoryFragment extends Fragment
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_sort:
-                if(mSortMenu == null)
-                {
-                    mSortMenu = new PopupMenu(getContext(), getActivity().findViewById(R.id.action_sort));
-                    mSortMenu.getMenuInflater().inflate(R.menu.menu_trade_sort, mSortMenu.getMenu());
-                    mSortMenu.getMenu().getItem(mCurrentSort-1).setChecked(true);
-                    mSortMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                        @Override
-                        public boolean onMenuItemClick(MenuItem menuItem) {
-                            switch (menuItem.getItemId()){
-                                case R.id.sort_name_asc:
-                                    mCurrentSort = 1;
-                                    break;
-                                case R.id.sort_name_desc:
-                                    mCurrentSort = 2;
-                                    break;
-                                case R.id.sort_last_update_asc:
-                                    mCurrentSort = 3;
-                                    break;
-                                case R.id.sort_last_update_desc:
-                                    mCurrentSort = 4;
-                                    break;
-                                case R.id.sort_suggested_price_asc:
-                                    mCurrentSort = 5;
-                                    break;
-                                case R.id.sort_suggested_price_desc:
-                                    mCurrentSort = 6;
-                                    break;
-                            }
-                            menuItem.setChecked(true);
-
-                            refreshInventory();
-
-                            return true;
+                PopupMenu sortMenu = new PopupMenu(getContext(), getActivity().findViewById(R.id.action_sort));
+                sortMenu.getMenuInflater().inflate(R.menu.menu_trade_sort, sortMenu.getMenu());
+                sortMenu.getMenu().getItem(mCurrentSort-1).setChecked(true);
+                sortMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem menuItem) {
+                        switch (menuItem.getItemId()){
+                            case R.id.sort_name_asc:
+                                mCurrentSort = 1;
+                                break;
+                            case R.id.sort_name_desc:
+                                mCurrentSort = 2;
+                                break;
+                            case R.id.sort_last_update_asc:
+                                mCurrentSort = 3;
+                                break;
+                            case R.id.sort_last_update_desc:
+                                mCurrentSort = 4;
+                                break;
+                            case R.id.sort_suggested_price_asc:
+                                mCurrentSort = 5;
+                                break;
+                            case R.id.sort_suggested_price_desc:
+                                mCurrentSort = 6;
+                                break;
                         }
-                    });
-                }
-                mSortMenu.show();
+                        menuItem.setChecked(true);
+
+                        refreshInventory();
+
+                        return true;
+                    }
+                });
+                sortMenu.show();
                 return true;
             case R.id.action_game:
                 final MenuPopupHelper appsPopup = new MenuPopupHelper(getContext(), mAppsMenu, getActivity().findViewById(R.id.action_game));
