@@ -6,8 +6,8 @@ android {
         applicationId "com.dev.tradeforwax"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 10
-        versionName "1.2.4"
+        versionCode 12
+        versionName "1.2.5"
 
         vectorDrawables.useSupportLibrary = true
     }
