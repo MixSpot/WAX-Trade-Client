@@ -14,6 +14,10 @@ public class OpskinsInventoryItem {
 
     public int getColor(){
         String colorLocal = color;
+        if(colorLocal.length() == 3)
+            colorLocal = String.valueOf(colorLocal.charAt(0)) + colorLocal.charAt(0) +
+                    colorLocal.charAt(1) + colorLocal.charAt(1) +
+                    colorLocal.charAt(2) + colorLocal.charAt(2);
         if(!colorLocal.contains("#"))
             colorLocal = "#" + colorLocal;
         return Color.parseColor(colorLocal);
